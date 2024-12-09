@@ -95,7 +95,7 @@ More advanced algorithms may be needed in obstacle detection, complex maneuvers 
 
 **Limitations**: One of the main challenges with PID controllers is the tuning process, which can be time-consuming and may require expert knowledge. Furthermore, PID controllers may not perform well in highly dynamic environments or when dealing with non-linear systems, as they do not account for the vehicle's dynamics or constraints.
 
-#### 3. Model Predictive Control (MPC)
+#### 3. Nonlinear Model Predictive Control (nMPC)
 
 **Nonlinear Model Predictive Control (nMPC)** is a control algorithm designed to handle systems with nonlinear dynamics. Here’s an explanation without using bullet points:
 
@@ -226,3 +226,16 @@ To evaluate the performance of the algorithms and select the best one for our ap
 5. **Simulation and Real-World Testing**: Use both simulation environments and real-world tests to gather data on performance metrics. Simulations can provide a controlled environment for initial testing, while real-world tests can validate the algorithm's performance in practical applications.
     
 6. **Comparative Analysis**: Conduct a comparative analysis of the algorithms based on the collected performance metrics. This can help identify the strengths and weaknesses of each algorithm, allowing for an informed decision on the most suitable option for our specific requirements.
+
+
+
+
+| **Criterion**         | **DWA**           | **Pure Pursuit** | **PID**       | **nMPC**               |
+| --------------------- | ----------------- | ---------------- | ------------- | ---------------------- |
+| Simplicity            | Moderate          | Simple           | Very simple   | Complex                |
+| Fast Response         | High              | High             | Very High     | Moderate               |
+| Predictive Capability | Local predictions | No prediction    | No prediction | Long-term predictions. |
+| Global Planning       | Insufficient      | Insufficient     | Insufficient  | Effective              |
+| Obstacle Avoidance    | Very good         | Weak             | Weak          | Very Good              |
+| Computational Cost    | Moderate          | Low              | Very low      | High                   |
+
